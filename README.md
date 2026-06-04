@@ -2,6 +2,12 @@
 
 <div align="center">
 
+<a href="https://www.spidey.in">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&repeat=true&width=500&lines=Building+things+that+matter+%F0%9F%9A%80;Code+%2B+Creativity+%3D+Magic+%E2%9C%A8;Open+Source+Enthusiast+%F0%9F%92%9C;Docker+all+the+things+%F0%9F%90%8B" alt="Typing SVG" />
+</a>
+
+<br/>
+
 ![Profile Views](https://komarev.com/ghpvc/?username=Spider2742&color=blueviolet&style=flat-square&label=Profile+Views)
 
 </div>
@@ -65,18 +71,25 @@
 
 ---
 
+### 🐍 Contribution Snake
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Spider2742/Spider2742/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Spider2742/Spider2742/output/github-snake.svg" />
+  <img alt="Snake animation" src="https://raw.githubusercontent.com/Spider2742/Spider2742/output/github-snake-dark.svg" width="100%" />
+</picture>
+
+</div>
+
+---
+
 ### ✍️ Random Dev Quote
 
 <div align="center">
   <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" />
 </div>
 
----
-
-<div align="center">
-
-[![](https://visitcount.itsvg.in/api?id=Spider2742&icon=0&color=0)](https://visitcount.itsvg.in)
-
-</div>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer" width="100%" />
