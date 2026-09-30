@@ -62,11 +62,7 @@
 </div>
 
 <div align="center">
-  <img src="https://streak-stats.demolab.com/?user=Spider2742&theme=dark&hide_border=false" />
-</div>
-
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Spider2742&theme=react-dark&hide_border=true&area=true" width="95%" />
+  <img src="https://streak-stats.demolab.com/?user=Spider2742&theme=dark&hide_border=false&v=2" />
 </div>
 
 ---
