@@ -4,6 +4,10 @@ on:
   schedule:
     - cron: "0 */6 * * *"
   workflow_dispatch:
+  # also run when this workflow itself changes, so edits take effect straight away
+  push:
+    branches: [main]
+    paths: [".github/workflows/snake.yml"]
 
 jobs:
   generate:
@@ -24,6 +28,23 @@ jobs:
             dist/github-snake-dark.svg?palette=github-dark&color_snake=#58a6ff
         env:
           FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+      # Daily counts for the activity graph on spidey.in (dates and counts only)
+      - name: Export contribution calendar
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api graphql -f login="${{ github.repository_owner }}" -f query='
+            query($login: String!) {
+              user(login: $login) { contributionsCollection { contributionCalendar {
+                weeks { contributionDays { date contributionCount contributionLevel } }
+              } } }
+            }' --jq '[.data.user.contributionsCollection.contributionCalendar.weeks[].contributionDays[]
+              | { date, count: .contributionCount,
+                  level: ({ NONE: 0, FIRST_QUARTILE: 1, SECOND_QUARTILE: 2, THIRD_QUARTILE: 3, FOURTH_QUARTILE: 4 }[.contributionLevel]) }]' \
+            > contributions.json
+          test "$(jq length contributions.json)" -gt 300 && mv contributions.json dist/
 
       - name: Push to output branch
         run: |
